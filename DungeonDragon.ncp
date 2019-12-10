@@ -1,0 +1,142 @@
+<Project>
+  <Name>POO</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>DungeonDragon</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>Personnage</Name>
+        <Access>Public</Access>
+        <Location left="470" top="1009" />
+        <Size width="374" height="332" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">string nom</Member>
+        <Member type="Field">int ptsVie</Member>
+        <Member type="Field">int ptsAttaque</Member>
+        <Member type="Field">int ptsDefense</Member>
+        <Member type="Field">bool modeDefense</Member>
+        <Member type="Method">public string Nom()</Member>
+        <Member type="Method">public int PtsVie()</Member>
+        <Member type="Method">public int PtsAttaque()</Member>
+        <Member type="Method">public int PtsDefence()</Member>
+        <Member type="Constructor">public Personnage(string nom, int ptsVie, int ptsAttaque, int ptsDefense)</Member>
+        <Member type="Constructor">public Personnage()</Member>
+        <Member type="Method">public virtual void AfficherInfo()</Member>
+        <Member type="Method">public void SubirDegats(int nbrDegats)</Member>
+        <Member type="Method">public void Attaquer()</Member>
+        <Member type="Method">public void Defendre()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Monstre</Name>
+        <Access>Public</Access>
+        <Location left="470" top="605" />
+        <Size width="356" height="179" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private Dictionary&lt;int,structMonstre&gt; dictMonstres</Member>
+        <Member type="Constructor">public Monstre(string nom, int ptsVie, int ptsAttaque, int ptsDefense)</Member>
+        <Member type="Constructor">public Monstre()</Member>
+        <Member type="Method">public bool ChargerFichier(string nomFichier)</Member>
+        <Member type="Method">public void CreerMonstre(int typeMonstre)</Member>
+        <Member type="Method">public override void AfficherInfo()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Heros</Name>
+        <Access>Public</Access>
+        <Location left="1062" top="1009" />
+        <Size width="548" height="332" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">string classe</Member>
+        <Member type="Field">int ptsMana</Member>
+        <Member type="Field">int nbrPotion</Member>
+        <Member type="Field">int ptsAttaqueMagique</Member>
+        <Member type="Field">int coutAttaqueMagique</Member>
+        <Member type="Method">public int PtsAttaqueMagique()</Member>
+        <Member type="Method">public int CoutAttaqueagique()</Member>
+        <Member type="Method">public int NbrPotion()</Member>
+        <Member type="Method">public int PtsMana()</Member>
+        <Member type="Constructor">public Heros(string nom, int ptsVie, int ptsAttaque, int ptsDefense, string type, int ptsMana, int nbrPotion)</Member>
+        <Member type="Method">public void RegenererPtsVie(int nbrPoints)</Member>
+        <Member type="Method">public void RegenererPtsMana(int nbrPoints)</Member>
+        <Member type="Method">public void AttaqueSpeciale()</Member>
+        <Member type="Method">public override void AfficherInfo()</Member>
+        <Member type="Method">public bool Equiper(List&lt;string&gt; equipement)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Equipement</Name>
+        <Access>Public</Access>
+        <Location left="1315" top="605" />
+        <Size width="295" height="213" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int id</Member>
+        <Member type="Field">string categorie</Member>
+        <Member type="Field">string nom</Member>
+        <Member type="Field">string classe</Member>
+        <Member type="Field">int ptsAttDefVie</Member>
+        <Member type="Field">Dictionary&lt;int, StructEquipement&gt; dictEquipements</Member>
+        <Member type="Method">public bool ChargerFichier(string nomFichier)</Member>
+        <Member type="Method">public List&lt;string&gt; OuvrirCoffre(int contenuCoffre)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Jeu</Name>
+        <Access>Public</Access>
+        <Location left="983" top="605" />
+        <Size width="240" height="332" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public bool gameOver = false</Member>
+        <Member type="Field">public bool quitter = false</Member>
+        <Member type="Field">public int caseActuelle = 0</Member>
+        <Member type="Field">Dictionary&lt;int, StructCarte&gt; dictCartes</Member>
+        <Member type="Method">private void AfficherChoixInvalide()</Member>
+        <Member type="Method">public bool ChargerFichiers(string nomFichier)</Member>
+        <Member type="Method">public void AfficherMenuPrincipal()</Member>
+        <Member type="Method">public string[] CreerPersonnage()</Member>
+        <Member type="Method">public void AfficherMenuJeu()</Member>
+        <Member type="Method">public void AfficherMenuCombat()</Member>
+        <Member type="Method">public int LancerDes(int nbrFaces)</Member>
+        <Member type="Method">public string[] Avancer(int nbrCase)</Member>
+        <Member type="Method">public Heros Combat()</Member>
+        <Member type="Method">public List&lt;string&gt; OuvrirCoffre()</Member>
+        <Member type="Method">public void Sortir()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships>
+      <Relationship type="Generalization" first="1" second="0">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Association" first="4" second="2">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="3" second="2">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="3" second="4">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Generalization" first="2" second="0">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+      </Relationship>
+      <Relationship type="Association" first="4" second="1">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+</Project>

@@ -1,0 +1,6 @@
+D:\POO Projects\DungeonDragon\DungeonDragon\bin\Debug\DungeonDragon.exe.config
+D:\POO Projects\DungeonDragon\DungeonDragon\bin\Debug\DungeonDragon.exe
+D:\POO Projects\DungeonDragon\DungeonDragon\bin\Debug\DungeonDragon.pdb
+D:\POO Projects\DungeonDragon\DungeonDragon\obj\Debug\DungeonDragon.csprojAssemblyReference.cache
+D:\POO Projects\DungeonDragon\DungeonDragon\obj\Debug\DungeonDragon.exe
+D:\POO Projects\DungeonDragon\DungeonDragon\obj\Debug\DungeonDragon.pdb
